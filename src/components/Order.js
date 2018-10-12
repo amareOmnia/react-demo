@@ -7,27 +7,27 @@ class Order extends React.Component {
     const fish = this.props.fishes[key];
     const count = this.props.order[key];
     const isAvailable = fish && fish.status === 'available';
+    const transitionOptions = {
+      // config for adding/removing order item
+      classNames: "order",
+      key,
+      timeout:{enter:1000, exit:500}
+    };
     // if fish from DB is not loaded, continue
     if (!fish) return null;
     if(!isAvailable) {
       return ( 
-      <CSSTransition
-      classNames="order"
-      key={key}
-      timeout={{enter:100, exit:100}}>
+      <CSSTransition {...transitionOptions}>
       <li key={key}>Sorry, {fish ? fish.name : "fish"} is no longer available</li>
       </CSSTransition>
       )
     }
     return (
-      <CSSTransition 
-      classNames="order"
-      key={key}
-      timeout={{enter:250, exit:250}}>
+      <CSSTransition {...transitionOptions}>
       <li key={key}>
       <span>
           <TransitionGroup component="span" className="count">
-            <CSSTransition>
+            <CSSTransition classNames="count" key={count} timeout={{enter: 200, exit: 200}}>
               <span>{count}</span>
             </CSSTransition>
           </TransitionGroup>
