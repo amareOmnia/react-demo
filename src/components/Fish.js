@@ -5,6 +5,7 @@ import {formatPrice} from "../helpers";
 
 
 class Fish extends React.Component {
+  // exception handler for improper this.prop imports  
   static propTypes = {
     details: PropTypes.shape({
       image: PropTypes.string,

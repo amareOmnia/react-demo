@@ -1,9 +1,15 @@
 import React from 'react';
+import PropTypes from "prop-types";
+
 import { getFunName } from '../helpers';
 
 class StorePicker extends React.Component {
   myInput = React.createRef();
-
+  
+  static propTypes = {
+    // exception handler for improper this.prop imports   
+    history: PropTypes.object,
+  };
   goToStore = event => {
     // stop form submission
     event.preventDefault();
