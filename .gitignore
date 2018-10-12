@@ -4,8 +4,7 @@
 .Spotlight-V100
 ._*
 .Trashes
-ehthumbs.db
-Thumbs.db
+# npm install, IDE files
 node_modules/
 es6modules/
 package-lock.json
