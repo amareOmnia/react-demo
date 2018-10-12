@@ -8,7 +8,7 @@ class StorePicker extends React.Component {
     // stop form submission
     event.preventDefault();
     // get text from input
-    const newPage = this.myInput.value.value;
+    const newPage = this.myInput.current.value;
     // change page name and goto
     // PUSH command doesn't reload page
     this.props.history.push(`/store/${newPage}`)
