@@ -1,0 +1,6 @@
+/node_modules
+.DS_Store
+.Spotlight-V100
+.Trashes
+/es6modules
+package-lock.json
