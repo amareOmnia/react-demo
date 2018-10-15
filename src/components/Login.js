@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Login = (props) => (
+const Login = props => (
   <nav className="login">
     <h2>Inventory</h2>
     <p>Sign in the manage your store's inventory</p>
@@ -21,7 +21,7 @@ const Login = (props) => (
 );
 
 Login.propTypes = {
-  authenticate: PropTypes.func.isRequireds
+  authenticate: PropTypes.func.isRequired
 }
 
 export default Login;
