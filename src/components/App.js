@@ -15,7 +15,7 @@ class App extends React.Component {
   };
   static propTypes = {
     // exception handler for improper this.prop imports
-    match:  PropTypes.object,
+    match:  PropTypes.object.isRequired,
   };
   
   componentDidMount() {

@@ -8,7 +8,7 @@ class StorePicker extends React.Component {
   
   static propTypes = {
     // exception handler for improper this.prop imports   
-    history: PropTypes.object,
+    history: PropTypes.object.isRequired,
   };
   goToStore = event => {
     // stop form submission

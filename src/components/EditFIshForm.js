@@ -6,11 +6,11 @@ class EditFishForm extends React.Component {
     // exception handler for improper this.prop imports
     static propTypes = {
         fish: PropTypes.shape({
-            image: PropTypes.string,
-            name: PropTypes.string,
-            desc: PropTypes.string,
-            status: PropTypes.string,
-            price: PropTypes.number,
+            image: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            desc: PropTypes.string.isRequired,
+            status: PropTypes.string.isRequired,
+            price: PropTypes.number.isRequired,
         }),
         index: PropTypes.string,
         updateFish: PropTypes.func,
