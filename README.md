@@ -13,4 +13,3 @@ Once that is completed, the custom command `npm run watch` will do two things: <
 # Upcoming
 
 - Security validations
-- Improved animations
