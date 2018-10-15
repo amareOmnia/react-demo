@@ -15,7 +15,7 @@ class Inventory extends React.Component {
     loadSampleFishes: PropTypes.func.isRequired,
   };
   
-  static state = {
+  state = {
     uid: null,
     owner: null,
   }
@@ -63,7 +63,8 @@ class Inventory extends React.Component {
   render() {
     const logout = <button onClick={this.logout}>Log Out!!!</button>;
     //check for current login
-    if(this.state==null || !this.state.uid) {
+    console.log(this.state);
+    if(!this.state.uid) {
       return <Login authenticate={this.authenticate} />;
     };
     if(this.state.uid !== this.state.owner) {
